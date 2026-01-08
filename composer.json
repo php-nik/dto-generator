@@ -1,0 +1,36 @@
+{
+  "name": "php-nik/dto-generator",
+  "description": "PHP DTO class generator",
+  "keywords": ["php", "dto", "package", "generator"],
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ruslan Pletnev",
+      "email": "phpnik@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "nikic/php-parser": "^5.0"
+  },
+  "require-dev": {
+    "phpstan/phpstan": "^2.1",
+    "phpunit/phpunit": "^12.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "PhpNik\\DtoGenerator\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "PhpNik\\DtoGenerator\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "config": {
+    "sort-packages": true,
+    "preferred-install": "dist"
+  }
+}
