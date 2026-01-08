@@ -1,0 +1,50 @@
+build:
+  nodes:
+    analysis:
+      dependencies:
+        override:
+          - composer install --no-interaction --prefer-dist
+      environment:
+        php:
+          version: 8.2
+      tests:
+        override:
+          - php-scrutinizer-run
+
+checks:
+  php:
+    code_rating: true
+    duplication: true
+
+tools:
+  phpstan:
+    enabled: true
+    config_file: phpstan.neon.dist
+
+  php_code_sniffer:
+    enabled: false
+
+  php_cs_fixer:
+    enabled: false
+
+  php_mess_detector:
+    enabled: false
+
+  php_pdepend:
+    enabled: false
+
+  php_analyzer:
+    enabled: true
+
+  php_sim:
+    enabled: true
+
+  php_cpd:
+    enabled: true
+
+filter:
+  paths:
+    - src/*
+  excluded_paths:
+    - tests/*
+    - vendor/*
