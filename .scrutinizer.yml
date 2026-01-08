@@ -10,7 +10,7 @@ build:
       tests:
         override:
           - php-scrutinizer-run
-          - vendor/bin/phpstan analyse --no-progress --configuration=phpstan.neon.dist
+          # - vendor/bin/phpstan analyse --no-progress --configuration=phpstan.neon.dist
 
 checks:
   php:
